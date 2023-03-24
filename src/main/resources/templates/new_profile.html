@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>New Person Details</title>
+</head>
+<body>
+<div class="container">
+<h1><center>Add New Details</center></h1>
+<hr>
+<form action="#" th:action="@{/saveProfile}" th:object="${profile}" method="POST">
+
+<input type="text" th:field="*{EMP_ID}" placeholder="EMP_ID">
+
+<input type="text" th:field="*{Name}" placeholder="Name">
+<input type="text" th:field="*{RM}" placeholder="RM">
+<input type="text" th:field="*{Band}" placeholder="Band">
+<input type="text" th:field="*{DOJ}" placeholder="DOJ">
+<input type="text" th:field="*{skillset}" placeholder="skillset">
+<input type="text" th:field="*{RASalloc}" placeholder="RASalloc" >
+<input type="text" th:field="*{Project}" placeholder="Project"><br>
+<center><button type="submit"> Save</button></center>
+
+</form>
+<div align="center">
+<hr>
+<a th:href = "@{/}"> Back to List</a>
+</div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
